@@ -1,6 +1,6 @@
 {
   "name": "generator-express-mysql-boilerplate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A nodejs based express-mysql api boilerplate generator",
   "homepage": "",
   "author": {
