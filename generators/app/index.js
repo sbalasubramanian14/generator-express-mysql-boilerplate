@@ -45,12 +45,6 @@ module.exports = class extends Generator {
         message: "Please specify the mysql database password :",
         default: "admin@123"
       }
-      // {
-      //   type: 'confirm',
-      //   name: 'someAnswer',
-      //   message: 'Would you like to enable this option?',
-      //   default: true
-      // }
     ];
 
     return this.prompt(prompts).then(props => {
@@ -61,7 +55,6 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copyTpl(
-      //glob.sync(this.templatePath('**/*'), { dot: true }),
       `${this.templatePath()}/**/*`,
       this.destinationPath(),
       this.props
@@ -69,6 +62,8 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      bower: false
+    });
   }
 };
