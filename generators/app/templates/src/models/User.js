@@ -5,8 +5,8 @@ module.exports = sequelize.define("User", {
     type: Sequelize.INTEGER(100),
     allowNull: false,
     autoIncrement: true,
-    primaryKey: true,
+    primaryKey: true
   },
   name: Sequelize.STRING(100),
-  email: Sequelize.STRING(200),
+  email: Sequelize.STRING(200)
 });
